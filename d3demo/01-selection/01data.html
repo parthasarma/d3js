@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+   <p></p>
+   <p></p>
+   <p></p>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.js"></script>
+<script>
+
+    var data = ['sdsg','dsgds','dgdgf']
+
+    d3.selectAll('p')
+        .data(data)
+        .text(function(d){
+            return d;
+        })
+    
+</script>
+
+</body>
+</html>
