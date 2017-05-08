@@ -4,12 +4,14 @@
     <title>Test</title>
     <style>
     .h-bar {
-        min-width: 15px;
+        min-height: 15px;
+        width: 15px;
         background-color: blue;
         margin: 5px;
         padding-bottom: 2px;
         color: white;
         text-align: right;
+        display: inline-block;        
     }
     </style>
 </head>
@@ -19,11 +21,11 @@
     <script>
     function render(data) {
         var bars = d3.select('body').selectAll('div').data(data);
-        bars.text((d) => d).classed('h-bar', true).style('width', function(d) {
+        bars.text((d) => d).classed('h-bar', true).style('height', function(d) {
             return d * 3
         });
 
-        bars.enter().append('div').text((d) => d).classed('h-bar', true).style('width', (d) => d * 3);
+        bars.enter().append('div').text((d) => d).classed('h-bar', true).style('height', (d) => d * 3);
     }
 
     var data = [23, 54, 66, 5, 45, 67, 89];
