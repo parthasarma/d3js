@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <title>Test</title>    
+    <title>Test</title>  
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">  
 </head>
 
 <body>
@@ -11,10 +12,13 @@
 	</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.js"></script>
     <script>
-    	d3.selectorAll('div.myClass > p').each(function() {
+    	d3.selectAll('div.myClass > p').each(function(d, i) {
     		console.log(this);
-    		d3.select(this).text('ABCD');
+    		if (i%2 == 0) {
+    			d3.select(this).text('ABCD');
+    		}
     	});
+
     </script>
 </body>
 
