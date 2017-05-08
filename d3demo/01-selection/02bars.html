@@ -15,21 +15,28 @@
     </style>
 </head>
 <body>
-   <p></p>
-   <p></p>
-   <p></p>
+   
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.js"></script>
 <script>
 
-    var data = ['sdsg','dsgds','dgdgf']
+    var data = [23,54,66,45,67,89]
 
-    d3.selectAll('p')
+    var bars = d3.select('body').selectAll('p')
         .data(data)
+       /* .text(function(d){
+            return d;
+        })*/
+
+    bars.enter()
+        .append('p')    
         .text(function(d){
             return d;
         })
+
+    // bars.exit().remove()    
     
 </script>
 
